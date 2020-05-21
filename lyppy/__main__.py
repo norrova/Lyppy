@@ -1,7 +1,7 @@
-from .args import configure
+from .args import configure, checking_requirements
 
 def main():
-    configure()
+    checking_requirements(configure())
     
 
 if __name__ == '__main__':
