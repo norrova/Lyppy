@@ -13,7 +13,7 @@ def configure():
     v_optional.add_argument("-p", "--project", action="store_true", required=False, help="make basic project")
     # others arguments
     v_other = v_parser.add_argument_group("others arguments")
-    v_required.add_argument("-r", "--remove" ,  required=False, metavar="<lorem>", help="remove directory, exclude <>")
+    v_required.add_argument("-r", "--remove" ,  required=False, nargs='?', metavar="<lorem>", help="remove directory, exclude <>")
     v_other.add_argument("-v", "--version", action="store_true", required=False , help="show version of the cli program")
     # interpret argument in command line
     if len(sys.argv)==1:
