@@ -27,7 +27,7 @@ def get_name():
     v_name = ""
     v_error = True
     while v_error:
-        v_name = input("Name of the module to create or over : ")
+        v_name = input("Name of the module to create or override : ")
         if (special_char(v_name) != None):
             v_error = False
         else:
