@@ -15,9 +15,6 @@ def create(p_type):
         print(identifier)
     return {"rep":v_rep,"name":v_name}
 
-def remove():
-    return 0
-
 def get_name():
     v_name = ""
     v_error = True

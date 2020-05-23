@@ -27,5 +27,5 @@ def module():
         with open(v_rep + v_tmp["name"] + ".py","w") as v_target:
             v_target.write(v_module["py"])
 
-def remove():
-    return 0
+def version():
+    print("Lyppy :: version :: 0.1")
