@@ -1,6 +1,6 @@
 # Lyppy
 
-A simple, fast and efficient library python to create some project
+A simple, fast and efficient python library to create some project
 
 ## How to install
 ```bash
