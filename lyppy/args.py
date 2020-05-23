@@ -3,7 +3,7 @@ from .manager import project, module, version
 import sys
 
 def configure():
-    v_parser = argparse.ArgumentParser(description="Create, Manage project python")
+    v_parser = argparse.ArgumentParser(description="Create python project")
     # required arguments
     v_required = v_parser.add_argument_group("Main arguments")
     v_required.add_argument("-m", "--make", action="store_true",  required=False, help="make basic module, use after this <-mo> or <-p> who include <-n>")

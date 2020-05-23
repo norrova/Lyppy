@@ -1,7 +1,7 @@
 import os
 import re
 
-def create(p_type):
+def init(p_type):
     v_name = get_name()
     v_rep = os.getcwd() + "\\" + v_name + "\\"
     try:
@@ -14,6 +14,13 @@ def create(p_type):
     except OSError as identifier:
         print(identifier)
     return {"rep":v_rep,"name":v_name}
+
+def create(v_rep):
+    try:
+        if not os.path.exists(v_rep):
+            os.mkdir(v_rep)
+    except OSError as identifier:
+        print(identifier)
 
 def get_name():
     v_name = ""
