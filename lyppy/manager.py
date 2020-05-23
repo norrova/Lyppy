@@ -21,7 +21,6 @@ def project():
         for v_directory in v_project["directories"]:
             create(v_rep + v_directory)
             
-
 def module():
     v_tmp = init("module")
     if(v_tmp != None):

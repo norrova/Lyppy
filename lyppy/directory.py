@@ -1,5 +1,6 @@
 import os
 import re
+from .data import v_project
 
 def init(p_type):
     v_name = get_name()

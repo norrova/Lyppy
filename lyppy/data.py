@@ -1,3 +1,4 @@
+# Project
 v_link = {
         "github":"https://github.com/norrova/Lyppy",
         ".gitignore":"https://www.gitignore.io/api/python"
@@ -14,8 +15,11 @@ v_project = {
         "bin",
         "docs",
         "data",
+        "tests",
     ]
 }
+
+# Module
 v_module = {
     "py":"def main():\n\traise NotImplementedError()\n\nif __name__ == \"__main__\":\n\tmain()"
 }
