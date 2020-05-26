@@ -18,7 +18,7 @@ $ sh install.sh
     * `-v` : lyppy version
     * `-m` : make
         * `-p` : make project
-        * `-mo` : make modules
+        * `-mo` : make module
 ## Example
 ### Version **0.1**
 ```bash
@@ -26,6 +26,25 @@ $ sh install.sh
 $ lyppy -m -p
 # Create module
 $ lyppy -m -mo
+```
+
+Project tree example
+```
+example
+│   .gitignore
+│   LICENCE
+│   README.md
+│   requirements.txt
+│   setup.py
+│
+├───beautiful_module
+│       beautiful_module.py
+│       __init__.py
+│
+├───bin
+├───data
+├───docs
+└───tests
 ```
 
 ## Task lists
