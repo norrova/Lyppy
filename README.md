@@ -1,4 +1,6 @@
 # Lyppy
+> Based on Python Application Layouts: A Reference by Kyle Stratis
+> https://realpython.com/python-application-layouts/
 
 A simple, fast and efficient python library to create some project
 
