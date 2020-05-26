@@ -1,7 +1,5 @@
 import os
 import requests
-import sys
-import json
 from .data import v_project, v_gitignore, v_module
 from .directory import init, create
 
