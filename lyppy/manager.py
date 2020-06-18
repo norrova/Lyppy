@@ -1,6 +1,6 @@
 import os
 import requests
-from .data import v_project, v_gitignore, v_module
+from .data import v_project, v_gitignore
 from .directory import init, create
 
 def project():    
@@ -25,7 +25,7 @@ def module():
         v_rep = v_tmp["rep"]
         with open(v_rep + "__init__.py","w"): pass
         with open(v_rep + v_tmp["name"] + ".py","w") as v_target:
-            v_target.write(v_module["py"])
+            v_target.write("def main():\n\traise NotImplementedError()\n\nif __name__ == \"__main__\":\n\tmain()")
 
 def test():
     v_tmp = init("test")

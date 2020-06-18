@@ -18,8 +18,3 @@ v_project = {
         "tests",
     ]
 }
-
-# Module
-v_module = {
-    "py":"def main():\n\traise NotImplementedError()\n\nif __name__ == \"__main__\":\n\tmain()"
-}
