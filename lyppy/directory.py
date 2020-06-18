@@ -1,5 +1,6 @@
 import os
 import re
+import sys
 from .data import v_project
 
 def init(p_type):
@@ -27,7 +28,10 @@ def get_name(p_type):
     v_name = ""
     v_error = True
     while v_error:
-        v_name = input("Enter a name of the " + p_type + " : ")
+        try:
+            v_name = input("Enter a name of the " + p_type + " : ")
+        except KeyboardInterrupt:
+            sys.exit()
         if (special_char(v_name) != None):
             v_error = False
         else:
@@ -57,7 +61,10 @@ def choice():
     v_dict = {"true":True, "false":None}
     v_valid = False
     while not v_valid:
-        v_tmp = input("Replace all existing files ? (true | false) : ").lower()
+        try:
+            v_tmp = input("Replace all existing files ? (true | false) : ").lower()
+        except KeyboardInterrupt:
+            sys.exit()
         if v_tmp in v_dict:
             break
         else:

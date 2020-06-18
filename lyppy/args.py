@@ -4,6 +4,7 @@ import sys
 
 def configure():
     v_parser = argparse.ArgumentParser(description="Create python project")
+    # optional arguments
     v_optional = v_parser.add_argument_group('make arguments')
     v_optional.add_argument("-m", "--module", action="store_true", required=False, help="make basic module")
     v_optional.add_argument("-p", "--project", action="store_true", required=False, help="make basic project")
