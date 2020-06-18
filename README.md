@@ -18,17 +18,9 @@ $ sh install.sh
 * `lyppy`
     * `-h` : help
     * `-v` : lyppy version
-    * `-m` : make
-        * `-p` : make project
-        * `-mo` : make module
-## Example
-### Version **0.1**
-```bash
-# Create project
-$ lyppy -m -p
-# Create module
-$ lyppy -m -mo
-```
+    * `-p` : make project
+    * `-mo` : make module
+    * `-t` : make test
 
 Project tree example
 ```
@@ -48,10 +40,3 @@ example
 ├───docs
 └───tests
 ```
-
-## Task lists
-
-* [x] : Make project
-* [x] : Make module
-* [ ] : Show project tree
-* [ ] : Make unittest

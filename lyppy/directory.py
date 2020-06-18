@@ -3,7 +3,7 @@ import re
 from .data import v_project
 
 def init(p_type):
-    v_name = get_name()
+    v_name = get_name(p_type)
     v_rep = os.getcwd() + "\\" + v_name + "\\"
     try:
         if not os.path.exists(v_rep):
@@ -23,11 +23,11 @@ def create(v_rep):
     except OSError as identifier:
         print(identifier)
 
-def get_name():
+def get_name(p_type):
     v_name = ""
     v_error = True
     while v_error:
-        v_name = input("Name of the module to create or override : ")
+        v_name = input("Enter a name of the " + p_type + " : ")
         if (special_char(v_name) != None):
             v_error = False
         else:
