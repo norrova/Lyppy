@@ -14,5 +14,5 @@ setup(
            "lyppy=lyppy.__main__:main"
         ]
     },
-    python_requires='>=3',
+    python_requires='>=3'
 )
