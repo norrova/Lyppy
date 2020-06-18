@@ -38,6 +38,21 @@ def special_char(p_string):
     v_pattern = re.compile("^([a-z]+_*)+$")
     return v_pattern.match(p_string)
 
+def camel_case(p_string):
+    v_list = list(p_string)
+    v_upper = False
+    for index in range(0, len(v_list), 1):
+        if(v_list[index] == '_'):
+            v_upper = True
+        elif(v_upper):
+            v_list[index] = v_list[index].upper()
+            v_upper = False
+        else:
+            pass
+    if '_' in v_list:
+        v_list.remove('_')
+    return "".join(v_list)
+
 def choice():
     v_dict = {"true":True, "false":None}
     v_valid = False
