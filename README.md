@@ -36,7 +36,7 @@ $ sh install.sh
             * `data`
             * `docs`
             * `tests`
-    * `-mo <name>` : make module
+    * `-m <name>` : make module
         * Create `__init__.py`
         * Create `<name>.py`
     * `-t <name>` : make test
