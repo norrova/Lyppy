@@ -1,6 +1,6 @@
 # Lyppy - version 0.3
 ![toucan](https://lh4.googleusercontent.com/TjmDgHr3UQOL2aCx4GQzq8hKpdWRUlZkNW5NIGRkRh6l3a4PAyibo361XkzOaXMtBQe8lqU-__2GwyqVY_9k=w223-h1809)
-> lyppy picture created by lunia • 2020
+> lyppy picture created by <a href="https://github.com/Lunia-UK">Lunia</a> • 2020
 
 > Based on Python Application Layouts: A Reference by Kyle Stratis
 > https://realpython.com/python-application-layouts/
