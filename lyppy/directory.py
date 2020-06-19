@@ -3,9 +3,8 @@ import re
 import sys
 from .data import v_project
 
-def init(p_type):
-    v_name = get_name(p_type)
-    v_rep = os.getcwd() + "\\" + v_name + "\\"
+def init(p_name, p_type):
+    v_rep = os.getcwd() + "\\" + p_name + "\\"
     try:
         if not os.path.exists(v_rep):
             os.mkdir(v_rep)
@@ -15,7 +14,7 @@ def init(p_type):
             if v_choice == None: return v_choice
     except OSError as identifier:
         print(identifier)
-    return {"rep":v_rep,"name":v_name}
+    return v_rep
 
 def create(v_rep):
     try:

@@ -1,12 +1,16 @@
 import os
 import requests
 from .data import v_project, v_gitignore
-from .directory import init, create, camel_case
+from .directory import init, create, camel_case, get_name
 
-def project():    
-    v_tmp = init("project")
-    if(v_tmp != None):
-        v_rep = v_tmp["rep"]
+def project(p_name = None):   
+    v_title = "project"
+    if p_name != None:
+        v_name = p_name
+    else: 
+        v_name = get_name(v_title)
+    v_rep = init(v_name, v_title)
+    if(v_rep != None):
         v_response = requests.get(v_gitignore)
         if v_response.status_code == 200:
             with open(v_rep + ".gitignore", "w+") as v_target:
@@ -19,21 +23,29 @@ def project():
         for v_directory in v_project["directories"]:
             create(v_rep + v_directory)
             
-def module():
-    v_tmp = init("module")
-    if(v_tmp != None):
-        v_rep = v_tmp["rep"]
+def module(p_name = None):
+    v_title = "module"
+    if p_name != None:
+        v_name = p_name
+    else: 
+        v_name = get_name(v_title)
+    v_rep = init(v_name, v_title)
+    if(v_rep != None):
         with open(v_rep + "__init__.py","w"): pass
-        with open(v_rep + v_tmp["name"] + ".py","w") as v_target:
+        with open(v_rep + v_name + ".py","w") as v_target:
             v_target.write("def main():\n\traise NotImplementedError()\n\nif __name__ == \"__main__\":\n\tmain()")
 
-def test():
-    v_tmp = init("test")
-    if(v_tmp != None):
-        v_rep = v_tmp["rep"]
+def test(p_name = None):
+    v_title = "test"
+    if p_name != None:
+        v_name = p_name
+    else: 
+        v_name = get_name(v_title)
+    v_rep = init(v_name, v_title)
+    if(v_rep != None):
         with open(v_rep + "__init__.py","w"): pass
-        with open(v_rep + "test_" + v_tmp["name"] + ".py","w") as v_target:
-            v_list = list(v_tmp["name"])
+        with open(v_rep + "test_" + v_name + ".py","w") as v_target:
+            v_list = list(v_name)
             v_list[0] = v_list[0].upper()
             print(camel_case("".join(v_list)))
             v_target.write(f"""import unittest\n\nclass Test{"".join(v_list)}(unittest.TestCase):\n\tdef test_upper(self):\n\t\tself.assertEqual('foo'.upper(), 'FOO')\n\nif __name__ == '__main__':\n\tunittest.main()""")
