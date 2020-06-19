@@ -13,8 +13,12 @@ def configure():
     v_other = v_parser.add_argument_group("others arguments")
     v_other.add_argument("-v", "--version", action="store_true", required=False , help="show version of the cli program")
     # interpret argument in command line
-    if len(sys.argv)==1:
+    v_size = len(sys.argv)
+    if v_size == 1:
         v_parser.print_help(sys.stderr)
+        sys.exit(1)
+    elif v_size >= 3:
+        v_parser.print_usage()
         sys.exit(1)
     else:
         return v_parser
