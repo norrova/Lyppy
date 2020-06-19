@@ -1,6 +1,4 @@
-import os
-import re
-import sys
+import os, re, sys, shutil
 from .data import v_project
 
 def init(p_name, p_type):
@@ -11,7 +9,11 @@ def init(p_name, p_type):
             print("Your " + p_type + " has been created with success !")
         else:
             v_choice = choice()
-            if v_choice == None: return v_choice
+            if v_choice == None: 
+                return v_choice
+            else:
+                shutil.rmtree(v_rep)
+                os.mkdir(v_rep)
     except OSError as identifier:
         print(identifier)
     return v_rep
@@ -22,6 +24,13 @@ def create(v_rep):
             os.mkdir(v_rep)
     except OSError as identifier:
         print(identifier)
+
+def set_name(p_name, v_title):
+    if p_name != None:
+        v_name = p_name
+    else: 
+        v_name = get_name(v_title)
+    return v_name
 
 def get_name(p_type):
     v_name = ""
@@ -34,7 +43,7 @@ def get_name(p_type):
         if (special_char(v_name) != None):
             v_error = False
         else:
-            print("Only lowercase letters or underscores are accepted\"_\"")
+            print("Only lowercase letters or underscores are accepted \"_\"")
     return v_name
 
 def special_char(p_string):

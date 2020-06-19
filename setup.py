@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="lyppy",
-    version="0.2",
+    version="0.3",
     author="Norro valentin",
     author_email="norrova.pro@gmail.com",
     description="Create python project",

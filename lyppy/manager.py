@@ -1,14 +1,11 @@
 import os
 import requests
 from .data import v_project, v_gitignore
-from .directory import init, create, camel_case, get_name
+from .directory import init, create, camel_case, get_name, set_name
 
 def project(p_name = None):   
     v_title = "project"
-    if p_name != None:
-        v_name = p_name
-    else: 
-        v_name = get_name(v_title)
+    v_name = set_name(p_name, v_title)
     v_rep = init(v_name, v_title)
     if(v_rep != None):
         v_response = requests.get(v_gitignore)
@@ -25,10 +22,7 @@ def project(p_name = None):
             
 def module(p_name = None):
     v_title = "module"
-    if p_name != None:
-        v_name = p_name
-    else: 
-        v_name = get_name(v_title)
+    v_name = set_name(p_name, v_title)
     v_rep = init(v_name, v_title)
     if(v_rep != None):
         with open(v_rep + "__init__.py","w"): pass
@@ -37,10 +31,7 @@ def module(p_name = None):
 
 def test(p_name = None):
     v_title = "test"
-    if p_name != None:
-        v_name = p_name
-    else: 
-        v_name = get_name(v_title)
+    v_name = set_name(p_name, v_title)
     v_rep = init(v_name, v_title)
     if(v_rep != None):
         with open(v_rep + "__init__.py","w"): pass
@@ -48,4 +39,5 @@ def test(p_name = None):
             v_target.write(f"""import unittest\n\nclass Test{camel_case(v_name)}(unittest.TestCase):\n\tdef test_upper(self):\n\t\tself.assertEqual('foo'.upper(), 'FOO')\n\nif __name__ == '__main__':\n\tunittest.main()""")
 
 def version():
-    print("Lyppy :: version :: 0.2")
+    print("Ready to start !")
+    print("lyppy: version: 0.3")

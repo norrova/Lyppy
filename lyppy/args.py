@@ -23,6 +23,7 @@ def configure():
             return v_parser
         else:
             v_parser.print_usage()
+            print("lyppy: error: only lowercase letters or underscores are accepted \"_\"")
             sys.exit(1)
     elif v_size > 3:
         v_parser.print_usage()
@@ -32,7 +33,6 @@ def configure():
 
 def checking_requirements(p_parser):
     v_args = p_parser.parse_args()
-    print(v_args)
     if v_args.module:
         module(v_args.module) if isinstance(v_args.module, str) else module()
     elif v_args.project:
