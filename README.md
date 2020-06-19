@@ -1,5 +1,5 @@
 # Lyppy - version 0.3
-![toucan](https://lh4.googleusercontent.com/TjmDgHr3UQOL2aCx4GQzq8hKpdWRUlZkNW5NIGRkRh6l3a4PAyibo361XkzOaXMtBQe8lqU-__2GwyqVY_9k=w223-h1809)
+![toucan](https://i.ibb.co/Wt5P0qX/68747470733a2f2f6c68342e676f6f676c6575736572636f6e74656e742e636f6d2f546a6d446748723355514f4c326143783447517a7138684b70645752556c5a6b4e57354e4947526b5268366c33613450417969626f333631586b7a4f61584d74425165386c.png)
 > lyppy picture created by <a href="https://github.com/Lunia-UK">Lunia</a> • 2020
 
 > Based on Python Application Layouts: A Reference by Kyle Stratis
