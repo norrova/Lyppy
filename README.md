@@ -1,8 +1,12 @@
 # Lyppy - version 0.3
+![toucan](https://lh4.googleusercontent.com/TjmDgHr3UQOL2aCx4GQzq8hKpdWRUlZkNW5NIGRkRh6l3a4PAyibo361XkzOaXMtBQe8lqU-__2GwyqVY_9k=w223-h1809)
+> lyppy picture created by lunia • 2020
+
 > Based on Python Application Layouts: A Reference by Kyle Stratis
 > https://realpython.com/python-application-layouts/
 
 A simple, fast and efficient cli program to create some project
+
 
 ## How to install
 ```bash
