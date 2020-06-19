@@ -1,4 +1,4 @@
-# Lyppy
+# Lyppy - version 0.3
 > Based on Python Application Layouts: A Reference by Kyle Stratis
 > https://realpython.com/python-application-layouts/
 
@@ -18,26 +18,26 @@ $ sh install.sh
 * `lyppy`
     * `-h` : help
     * `-v` : lyppy version
-    * `-p` : make project
-        * Create __init__.py
+    * `-p <name>` : make project
+        * Create `__init__.py`
         * Create :
-            * .gitignore 
+            * `.gitignore` 
                 * `https://www.toptal.com/developers/gitignore/api/python`
                 * `https://www.toptal.com/developers/gitignore?templates=python`
-            * LICENCE
-            * README.md
-            * requirements.txt
-            * setup.py
-            * bin
-            * data
-            * docs
-            * tests
-    * `-mo` : make module
-        * Create __init__.py
-        * Create \<name\>.py
-    * `-t` : make test
-        * Create __init__.py
-        * Create \<name\>.py
+            * `LICENCE`
+            * `README.md`
+            * `requirements.txt`
+            * `setup.py`
+            * `bin`
+            * `data`
+            * `docs`
+            * `tests`
+    * `-mo <name>` : make module
+        * Create `__init__.py`
+        * Create `<name>.py`
+    * `-t <name>` : make test
+        * Create `__init__.py`
+        * Create `<name>.py`
 
 ## Project tree example
 ```bash
