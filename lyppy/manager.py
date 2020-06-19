@@ -45,10 +45,7 @@ def test(p_name = None):
     if(v_rep != None):
         with open(v_rep + "__init__.py","w"): pass
         with open(v_rep + "test_" + v_name + ".py","w") as v_target:
-            v_list = list(v_name)
-            v_list[0] = v_list[0].upper()
-            print(camel_case("".join(v_list)))
-            v_target.write(f"""import unittest\n\nclass Test{"".join(v_list)}(unittest.TestCase):\n\tdef test_upper(self):\n\t\tself.assertEqual('foo'.upper(), 'FOO')\n\nif __name__ == '__main__':\n\tunittest.main()""")
+            v_target.write(f"""import unittest\n\nclass Test{camel_case(v_name)}(unittest.TestCase):\n\tdef test_upper(self):\n\t\tself.assertEqual('foo'.upper(), 'FOO')\n\nif __name__ == '__main__':\n\tunittest.main()""")
 
 def version():
     print("Lyppy :: version :: 0.2")

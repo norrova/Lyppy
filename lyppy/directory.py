@@ -54,6 +54,7 @@ def camel_case(p_string):
             pass
     if '_' in v_list:
         v_list.remove('_')
+    v_list[0] = v_list[0].upper()
     return "".join(v_list)
 
 def choice():
